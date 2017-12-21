@@ -1,0 +1,4 @@
+<!-- Any value that can resolve to a string can be placed within the string interpolation binding. -->
+<!-- Attribute directives don't add or remove elements, they only change the element on which they were placed. 
+ngStyle is an example of an attribute directive.-->
+<p [ngStyle]="{background: getColor()}">{{ 'Server' }} with ID {{ id }} is {{ getServerStatus() }}.</p>

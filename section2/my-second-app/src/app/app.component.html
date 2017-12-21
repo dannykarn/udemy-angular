@@ -1,0 +1,30 @@
+<!--
+Databinding = Communication
+
+Output Data From TypeScript Code (Business Logic) to Template (HTML)
+    String Interpolation - {{ data }}
+    Property Binding - [property]="data"
+
+React to (User) Events in Template (HTML) to TypeScript Code (Business Logic)
+    Event Binding - (event)="expression"
+
+Combination of both
+    Two-Way-Binding - [(ngModel)]="data"
+
+-->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>I'm in the AppComponent!</h3>
+            <hr/>
+            <!-- <app-servers></app-servers> -->
+            <!-- <div app-servers></div> -->
+            <div class="app-servers"></div>
+            <hr/>
+            <app-success-alert></app-success-alert>
+            <app-warning-alert></app-warning-alert>
+            <hr/>
+            <app-user-manager></app-user-manager>
+        </div>
+    </div>
+</div>
