@@ -1,0 +1,10 @@
+<button class="btn btn-primary"
+        (click)="onDisplayDetailsClick()">Display Details</button>
+<p *ngIf="displayDetails">The secret password is "Curry Duck Noodles".</p>
+<p>
+        <strong>Display Detail Log:</strong>
+</p>
+<div *ngFor="let log of logs">
+        <p [ngStyle]="{background: log > 4 ? 'blue' : 'none'}"
+           [ngClass]="{logEntry: log > 4}">Display detail button clicked at {{ getTimestamp() }}.</p>
+</div>
