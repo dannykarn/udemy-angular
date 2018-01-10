@@ -1,0 +1,68 @@
+<div class="container">
+  <h3>Bind It!</h3>
+  <div class="col">
+    <div class="col-md-12">
+      <div class="row">
+        1. Create three new components: GameControl, Odd, and Even.
+      </div>
+      <div class="row">
+        2. The GameControl component should have buttons to start and stop the game.
+      </div>
+      <div class="row">
+        3. When starting the game, an event (holding the incrementing number) should get emitted each second (ref = setInterval()).
+      </div>
+      <div class="row">
+        4. The event should be listenable from outside the component.
+      </div>
+      <div class="row">
+        5. When stopping the game, no more events should be emitted (clearInterval(ref)).
+      </div>
+      <div class="row">
+        6. A new Odd component should be created for every odd number emitted. The same should happen for the Even component on even
+        numbers.
+      </div>
+      <div class="row">
+        7. Simply output Odd - NUMBER or Even - NUMBER in the two components.
+      </div>
+      <div class="row">
+        8. Style the element (e.g. paragraph) holding your output texts differently in both components.
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <!-- <app-odd>
+            <p *ngIf="isCurrentNumberOddAndNotZero()">
+              <strong>The last reported ODD value was {{ currentNumber }}</strong>
+            </p>
+            <p *ngIf="isCurrentNumberEvenAndNotZero()">
+              <strong>The last reported ODD value was {{ currentNumber - 1 }}</strong>
+            </p>
+          </app-odd> -->
+          <app-odd [newNumber]="currentNumber"></app-odd>
+        </div>
+        <div class="col-md-6">
+          <!-- <app-even>
+            <p *ngIf="isCurrentNumberEvenAndNotZero()">
+              <strong>The last reported EVEN value was {{ currentNumber }}</strong>
+            </p>
+            <p *ngIf="isCurrentNumberOddAndNotZero()">
+              <strong>The last reported EVEN value was {{ currentNumber - 1 }}</strong>
+            </p>
+          </app-even> -->
+          <app-even [newNumber]="currentNumber"></app-even>
+        </div>
+      </div>
+      <hr>
+      <app-game-control (gameControlEvent)="handleGameComponentEvent()"></app-game-control>
+      <br>
+      <div class="row">
+        <ul class="list-group">
+          <li class="list-group-item"
+              *ngFor="let emittedEventNumber of emittedEventNumbers">
+            GameControl emitted an event: {{ emittedEventNumber }}.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
