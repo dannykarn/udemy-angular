@@ -6,4 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  selectedFeature: string = 'recipes';
+
+  handleHeaderClickEvent(featureId: string) {
+    this.selectedFeature = featureId;
+  }
+
+  isRecipesPageSelected() {
+    return this.selectedFeature === 'recipes';
+  }
+
+  isShoppingListPageSelected() {
+    return this.selectedFeature === 'shopping-list';
+  }
+
 }
