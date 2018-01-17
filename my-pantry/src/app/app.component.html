@@ -1,9 +1,11 @@
-<app-header (headerClickEvent)="handleHeaderClickEvent($event)"></app-header>
+<!-- <app-header (headerClickEvent)="handleHeaderClickEvent($event)"></app-header> -->
+<app-header></app-header>
 <div class="container">
   <div class="col">
     <div class="col-md-12">
-      <app-recipes *ngIf="isRecipesPageSelected()"></app-recipes>
-      <app-shopping-list *ngIf="isShoppingListPageSelected()"></app-shopping-list>
+      <!-- <app-recipes *ngIf="isRecipesPageSelected()"></app-recipes>
+      <app-shopping-list *ngIf="isShoppingListPageSelected()"></app-shopping-list> -->
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
